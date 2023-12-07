@@ -33,7 +33,7 @@
     "type": "git",
     "url": "https://github.com/vlbras/nestjs-object-id.git"
   },
-  "homepage": "https://github.com/vlbras/nestjs-paginate#readme",
+  "homepage": "https://github.com/vlbras/nestjs-object-id#readme",
   "publishConfig": {
     "access": "public"
   }
