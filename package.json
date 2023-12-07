@@ -1,0 +1,40 @@
+{
+  "name": "nestjs-object-id",
+  "version": "1.0.0",
+  "description": "MongoDB ObjectId validator and parser for NestJS",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "nestjs",
+    "nest",
+    "mongodb",
+    "mongoose",
+    "objectid",
+    "decorator",
+    "class-validator",
+    "pipe"
+  ],
+  "author": "Vladyslav Braslavskyi <vladyslav.braslavskyi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.2.10",
+    "class-validator": "^0.14.0",
+    "mongoose": "^8.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vlbras/nestjs-object-id.git"
+  },
+  "homepage": "https://github.com/vlbras/nestjs-paginate#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
