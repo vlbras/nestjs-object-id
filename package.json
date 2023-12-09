@@ -1,6 +1,6 @@
 {
   "name": "nestjs-object-id",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "MongoDB ObjectId validator and parser for NestJS",
   "main": "dist/index.js",
   "files": [
