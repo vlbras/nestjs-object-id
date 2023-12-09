@@ -1,6 +1,8 @@
 # nestjs-object-id
 
 [![npm](https://img.shields.io/npm/v/nestjs-object-id.svg)](https://www.npmjs.com/package/nestjs-object-id)
+[![license](https://img.shields.io/github/license/vlbras/nestjs-object-id.svg)](https://www.npmjs.com/package/nestjs-object-id)
+[![downloads](https://img.shields.io/npm/dt/nestjs-object-id.svg)](https://www.npmjs.com/package/nestjs-object-id)
 
 MongoDB ObjectId validator and parser for NestJS
 
@@ -14,7 +16,7 @@ npm install nestjs-object-id
 
 ### @IsObjectId()
 @IsObjectId() is a decorator for validating MongoDB Object IDs in DTOs.
-<br>Here is an example along with commonly used `IsString` and `IsNotEmpty` from [`class-validator`](https://github.com/typestack/class-validator) package.
+<br>Here is an example along with commonly used `IsString` and `IsNotEmpty` from [class-validator](https://github.com/typestack/class-validator) package.
 
 ```ts
 import { IsObjectId } from 'nestjs-object-id';
