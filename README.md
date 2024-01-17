@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/nestjs-object-id.svg)](https://www.npmjs.com/package/nestjs-object-id)
 [![license](https://img.shields.io/github/license/vlbras/nestjs-object-id.svg)](https://www.npmjs.com/package/nestjs-object-id)
+[![npm downloads](https://img.shields.io/npm/dt/nestjs-object-id.svg)](https://www.npmjs.com/package/nestjs-object-id)
 
 ## Description
 
@@ -44,14 +45,14 @@ class CreatePostDto {
 }
 ```
 
-If an invalid author ID is received, an error will be thrown:
+If an invalid 'authorId' is received, an error will be thrown:
 
 ```ts
 {
   message: ["authorId must be an MongoDB ObjectId instance"],
   error: "Bad Request",
-  statusCode: 400,
-};
+  statusCode: 400
+}
 ```
 
 ### IsObjectIdPipe
@@ -68,6 +69,18 @@ export class PostsController {
   findOne(@Param('id', IsObjectIdPipe) id: string) {
     return this.postsService.findOne(id);
   }
+}
+```
+
+> **WARNING** To work with Pipes correctly, make sure you have @nestjs/common@10.2.7 or higher installed.
+
+If an invalid 'id' is received, an error will be thrown:
+
+```ts
+{
+    "message": "Invalid ObjectId",
+    "error": "Bad Request",
+    "statusCode": 400
 }
 ```
 
@@ -88,6 +101,8 @@ export class PostsController {
   }
 }
 ```
+
+> **HINT** To log request and response activity clearly and efficiently, you can install [nesjs-http-logger](https://www.npmjs.com/package/nestjs-http-logger).
 
 ### GraphQL
 

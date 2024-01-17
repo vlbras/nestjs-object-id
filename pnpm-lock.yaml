@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@nestjs/common':
-    specifier: ^10.3.0
-    version: 10.3.0(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
+    specifier: ^10.2.7
+    version: 10.2.7(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
   class-validator:
     specifier: ^0.14.1
     version: 0.14.1
@@ -33,8 +33,8 @@ packages:
       sparse-bitfield: 3.0.3
     dev: false
 
-  /@nestjs/common@10.3.0(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1):
-    resolution: {integrity: sha512-DGv34UHsZBxCM3H5QGE2XE/+oLJzz5+714JQjBhjD9VccFlQs3LRxo/epso4l7nJIiNlZkPyIUC8WzfU/5RTsQ==}
+  /@nestjs/common@10.2.7(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1):
+    resolution: {integrity: sha512-cUtCRXiUstDmh4bSBhVbq4cI439Gngp4LgLGLBmd5dqFQodfXKnSD441ldYfFiLz4rbUsnoMJz/8ZjuIEI+B7A==}
     peerDependencies:
       class-transformer: '*'
       class-validator: '*'
