@@ -15,7 +15,7 @@ export function IsObjectId(
           return Types.ObjectId.isValid(value);
         },
         defaultMessage: () => {
-          return `${propertyName} must be an MongoDB ObjectId instance`;
+          return `${propertyName} must be a MongoDB ObjectId instance`;
         },
       },
     });
