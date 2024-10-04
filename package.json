@@ -1,6 +1,6 @@
 {
   "name": "nestjs-object-id",
-  "version": "1.3.2",
+  "version": "1.4.2",
   "description": "MongoDB ObjectId validator and parser for NestJS",
   "author": "Vladyslav Braslavskyi <vladyslav.braslavskyi@gmail.com>",
   "license": "MIT",
