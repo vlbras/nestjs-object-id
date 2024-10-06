@@ -143,7 +143,7 @@ If an invalid 'authorId' is received, an error will be thrown:
 
 ```ts
 {
-  message: ["authorId must be an MongoDB ObjectId instance"],
+  message: ["Invalid ObjectId for property \"authorId\": 0000000000000000",],
   error: "Bad Request",
   statusCode: 400
 }
@@ -172,7 +172,7 @@ If an invalid 'authorId' is received, an error will be thrown:
 
 ```ts
 {
-  message: ["authorId must be an MongoDB ObjectId instance"],
+  message: ["Invalid ObjectId for property \"authorId\": 0000000000000000",],
   error: "Bad Request",
   statusCode: 400
 }
