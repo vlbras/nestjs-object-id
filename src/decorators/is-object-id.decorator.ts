@@ -1,4 +1,4 @@
-import { registerDecorator, ValidationOptions } from "class-validator";
+import { registerDecorator, ValidationArguments, ValidationOptions } from "class-validator";
 import { Types } from "mongoose";
 
 export function IsObjectId(
@@ -14,8 +14,8 @@ export function IsObjectId(
         validate(value: string) {
           return Types.ObjectId.isValid(value);
         },
-        defaultMessage: () => {
-          return `${propertyName} must be a MongoDB ObjectId instance`;
+        defaultMessage(args: ValidationArguments) {
+          return `Invalid ObjectId for property "${args.property}": ${args.value}`;
         },
       },
     });

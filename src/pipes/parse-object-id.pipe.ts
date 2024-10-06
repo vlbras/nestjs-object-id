@@ -5,12 +5,11 @@ import { Types } from "mongoose";
 export class ParseObjectIdPipe
   implements PipeTransform<string, Types.ObjectId>
 {
-  constructor(private readonly errorMessage?: string) {}
   transform(value: string): Types.ObjectId {
     const isValidObjectId = Types.ObjectId.isValid(value);
 
     if (!isValidObjectId) {
-      throw new BadRequestException(this.errorMessage || "Invalid ObjectId");
+      throw new BadRequestException("Invalid ObjectId");
     }
 
     return new Types.ObjectId(value);

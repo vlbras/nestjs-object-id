@@ -12,12 +12,14 @@ This package provides an efficient way to validate and parse ObjectIds for NestJ
 
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [@IsObjectId()](#isobjectid)
+- [Pipes](#pipes)
   - [IsObjectIdPipe](#isobjectidpipe)
   - [ParseObjectIdPipe](#parseobjectidpipe)
   - [GraphQL](#graphql)
   - [Microservices](#microservices)
+- [Decorators](#decorators)
+  - [@IsObjectId()](#isobjectid)
+  - [@ParseObjectId()](#parseobjectid)
 
 ## Installation
 
@@ -25,35 +27,7 @@ This package provides an efficient way to validate and parse ObjectIds for NestJ
 npm install nestjs-object-id
 ```
 
-## Usage
-
-### @IsObjectId()
-@IsObjectId() is a decorator for validating MongoDB ObjectIds in DTOs.        
-Here is an example along with commonly used `IsString` and `IsNotEmpty` from [class-validator](https://github.com/typestack/class-validator) package.
-
-```ts
-import { IsObjectId } from 'nestjs-object-id';
-import { IsString, IsNotEmpty } from 'class-validator';
-
-class CreatePostDto {
-    @IsObjectId()
-    authorId: string;
-
-    @IsString()  
-    @IsNotEmpty()
-    title: string;
-}
-```
-
-If an invalid 'authorId' is received, an error will be thrown:
-
-```ts
-{
-  message: ["authorId must be an MongoDB ObjectId instance"],
-  error: "Bad Request",
-  statusCode: 400
-}
-```
+## Pipes
 
 ### IsObjectIdPipe
 
@@ -142,6 +116,65 @@ export class PostsController {
   findOne(@Payload('id', IsObjectIdPipe) id: string) {
     return this.postsService.findOne(id);
   }
+}
+```
+
+## Decorators
+
+### @IsObjectId()
+@IsObjectId() is a decorator for validating MongoDB ObjectIds in DTOs.        
+Here is an example along with commonly used `IsString` and `IsNotEmpty` from [class-validator](https://github.com/typestack/class-validator) package.
+
+```ts
+import { IsObjectId } from 'nestjs-object-id';
+import { IsString, IsNotEmpty } from 'class-validator';
+
+class CreatePostDto {
+    @IsObjectId()
+    authorId: string;
+
+    @IsString()  
+    @IsNotEmpty()
+    title: string;
+}
+```
+
+If an invalid 'authorId' is received, an error will be thrown:
+
+```ts
+{
+  message: ["authorId must be an MongoDB ObjectId instance"],
+  error: "Bad Request",
+  statusCode: 400
+}
+```
+
+### @ParseObjectId()
+@ParseObjectId() is a decorator for parsing MongoDB ObjectIds in DTOs.        
+Here is an example along with commonly used `IsString` and `IsNotEmpty` from [class-validator](https://github.com/typestack/class-validator) package.
+
+```ts
+import { IsObjectId } from 'nestjs-object-id';
+import { IsString, IsNotEmpty } from 'class-validator';
+import { Types } from 'mongoose';
+
+class CreatePostDto {
+    @ParseObjectId()
+    authorId: Types.ObjectId;;
+
+    @IsString()  
+    @IsNotEmpty()
+    title: string;
+}
+```
+
+If an invalid 'authorId' is received, an error will be thrown:
+
+```ts
+{
+  message: ["authorId must be an MongoDB ObjectId instance"],
+  error: "Bad Request",
+  statusCode: 400
 }
 ```
 
