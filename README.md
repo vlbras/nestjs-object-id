@@ -10,21 +10,25 @@ This package provides an efficient way to validate and parse ObjectIds for NestJ
 
 ## Table of Contents
 
-- [Description](#description)
-- [Installation](#installation)
-- [Pipes](#pipes)
-  - [IsObjectIdPipe](#isobjectidpipe)
-  - [ParseObjectIdPipe](#parseobjectidpipe)
-  - [GraphQL](#graphql)
-  - [Microservices](#microservices)
-- [Decorators](#decorators)
-  - [@IsObjectId()](#isobjectid)
-  - [@ParseObjectId()](#parseobjectid)
+- [nestjs-object-id](#nestjs-object-id)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Pipes](#pipes)
+    - [IsObjectIdPipe](#isobjectidpipe)
+    - [ParseObjectIdPipe](#parseobjectidpipe)
+    - [GraphQL](#graphql)
+    - [Microservices](#microservices)
+  - [Decorators](#decorators)
+    - [@IsObjectId()](#isobjectid)
+    - [@ParseObjectId()](#parseobjectid)
+  - [Author](#author)
+  - [License](#license)
 
 ## Installation
 
 ```
-npm install nestjs-object-id
+npm install nestjs-object-id mongoose
 ```
 
 ## Pipes
